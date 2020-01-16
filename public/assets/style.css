@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Oswald&display=swap');
+body * {
+    font-family: 'Comfortaa', cursive;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+}
+
+body {
+    text-align: center;
+    align-items: center;
+}
+
+input,textarea {
+    border-radius: 10px;
+    border-color: darkgreen;
+    width: auto;
+    height: 30px;
+    padding: 2px;
+    transition: 0.5s;
+}
+textarea{
+    height: auto;
+    width: 100%;
+    resize: none;
+}
+
+.holder * {
+    margin-top: 5px;
+}
+
+.holder {
+    padding: 20px;
+    display: inline-block;
+    border: 3px solid aliceblue;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+button {
+    background-color: transparent;
+    border: 3px solid darkgreen;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 9px;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background-color: darkgreen;
+    color: white;
+    border: 3px solid white;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.social-login {
+    height: 40px;
+    width: 40px;
+}
+
+.social-login-btn {
+    border-radius: 10px;
+}
+
+#container {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    float: right;
+    margin-top: 0;
+}
+
+#namee {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #333;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    line-height: 50px;
+}
+
+#user-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#nav {
+    width: 95%;
+    margin: 0;
+    height: 50px;
+}
+.navicons{
+    cursor: pointer;
+}
+.modal,
+.modal-box {
+  z-index: 900;
+}
+
+.modal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.8);
+  overflow: auto;
+}
+
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 920px;
+  margin: 100px auto;
+  animation-name: modalbox;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0,0,.3,1.6);
+}
+
+.modal-header {
+  padding: 20px 40px;
+  background: #546E7A;
+  color: #ffffff;
+}
+
+.modal-body {
+  background: #ECEFF1;
+  padding: 60px 40px;
+}
+
+/* Close Button */
+.close-modal {
+  text-align: right;
+  cursor: pointer;
+}
+
+/* Animation */
+@-webkit-keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+@keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+
+
+.modal-trigger {
+  top: 50%;
+  left: 50%;
+  padding: 20px 40px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+}
+
+.modal-trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: ease .2s;
+}
+
+
+.modal-trigger:hover {
+  padding: 20px 60px;
+}
+.article{
+  border: black;
+  border-width: 5px;
+  border-radius: 10px;
+}

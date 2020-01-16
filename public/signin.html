@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memo</title>
+  <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="shortcut icon" href="assets/profile.png">
+</head>
+
+<body>
+
+
+  <div class="holder"><div id="login-div">
+    <img src="assets/default.svg" alt="logo">
+    <h3>Login to your OnMemo Account</h3>
+    <input type="email" name="email" id="email" placeholder="Email">
+    <br>
+    <input type="password" name="password" id="password" placeholder="Password">
+    <br>
+    <button id="login">Login</button>
+    <br>
+<h4>Or Sign-in With:</h4>  
+<button class="social-login-btn" id="google-signin"><img src="assets/Google-512.png" class="social-login"></button>
+<h4>If You Dont Have Account</h4> <button id="signup-prompt" onclick="window.location.href='signup.html'">Sign Up</button>
+</div>
+
+</div>
+  <script defer src="js/init.js"></script>
+</body>
+
+</html>

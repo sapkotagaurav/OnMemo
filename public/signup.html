@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memo</title>
+  <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="shortcut icon" href="assets/profile.png">
+</head>
+
+<body>
+
+
+  <div class="holder">
+    <div class="holderr" id="signup-div">
+    <img src="assets/default.svg" alt="logo">
+    <h3>Sign Up for your OnMemo Account</h3>
+    <input type="name" name="name" id="name" placeholder="Full Name">
+    <br>
+    <input type="email" name="email" id="email" placeholder="Email">
+    <br>
+    <input type="password" name="password" id="password" placeholder="Password">
+    <br>
+    <button id="signup">Sign Up</button>
+    <br>
+<h4>If You Have Account</h4> <button id="signup-prompt" onclick="window.location.href='signin.html'">Sign In</button>
+</div>
+<div id="verify" style="display: none;">
+  <h1 id="go-verify"></h1>
+</div>
+</div> 
+
+  <script defer src="js/signup.js"></script>
+
+</body>
+
+</html>
