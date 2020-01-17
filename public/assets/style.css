@@ -202,8 +202,10 @@ img {
 .modal-trigger:hover {
   padding: 20px 60px;
 }
-.article{
+.main{
   border: black;
   border-width: 5px;
   border-radius: 10px;
+  padding: 5px;
+  height: 100px;
 }

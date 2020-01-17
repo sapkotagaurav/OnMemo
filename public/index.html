@@ -21,7 +21,7 @@
         <h4 id="verified-txt"></h4>
         <p>If Link has expired <a id="resend" href="javascript:void(0)">Resend Verification Link</a></p>
         </div>
-        <div id="user-info" style="display: none;">
+        <div id="user-info" style="display: none;" onclick="window.scrollTo(0,document.body.scrollHeight);">
           <div id="container" class="navicons">
             <div id="namee">
               
@@ -40,17 +40,34 @@
         </div>
         <div class="modal-body">
           <label for="title-post" style="float: left;" id="title-label">Title:</label>
-          <input type="text" style="width: 100%;" id="title-post" name="title-post">
+          <input type="text" style="width: 100%;" id="title-post" name="title-post" required>
           <br />
           <label for="post-main" style="float: left;">Memo:</label>
-          <textarea name="post-main" id="post-main" rows="15" autocapitalize="true"></textarea>
+          <textarea name="post-main" id="post-main" rows="15" autocapitalize="true" required></textarea>
           <br>
           <button id="add-post-btn">Add</button>
         </div>
       </div>
     </div>
     <div class="holder" id="main-memo"></div>
-    <button id="logout" style="display: none;"></button>
+    <div class="modal" id="modal-view">
+      <div class="modal-sandbox" id="modal-sandbox-view"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="close-modal" id="close-modal-view">&#10006;</div> 
+          <h1 id="view-title"></h1>
+          <h6 id="view-date"></h6>
+        </div>
+        <div class="modal-body">
+         <h3 id="view-article"></h3>
+        </div>
+      </div>
+    </div>
+    <div class="solder" style="margin-top: 20px;"> 
+      <h1 id="username"></h1>
+      <button id="logout" onclick="logou()">Log Out</button>
+    </div>
+    
     <script defer src="js/index.js"></script>
 </body>
 </html>
