@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OnMemo</title>
-    <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
-    <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OnMemo</title>
+  <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="assets/style.css">
   <link rel="shortcut icon" href="assets/profile.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 </head>
+
 <body>
-    <div class="holder" id="nav">
+  <div class="holder" id="nav">
     <div id="verified" style="display: none;">
-        <h4 id="verified-txt"></h4>
-        <p>If Link has expired <a id="resend" href="javascript:void(0)">Resend Verification Link</a></p>
-        </div>
-        <div id="user-info" style="display: none;" onclick="window.scrollTo(0,document.body.scrollHeight);">
-          <div id="container" class="navicons">
-            <div id="namee">
-              
-             </div>
-          </div>
-        </div>
-        <i class="fa fa-home fa-3x navicons" style="float: left; color: blue;" aria-hidden="true"></i>
-        <i class="fas fa-plus-circle fa-3x navicons" style="color: blue;" id="add-post"></i>
+      <h4 id="verified-txt"></h4>
+      <p>If Link has expired <a id="resend" href="javascript:void(0)">Resend Verification Link</a></p>
     </div>
-    <div class="modal" id="modal-name">
-      <div class="modal-sandbox" id="modal-sandbox"></div>
-      <div class="modal-box">
-        <div class="modal-header">
-          <div class="close-modal" id="close-modal">&#10006;</div> 
-          <h1>Add a Memo</h1>
-        </div>
-        <div class="modal-body">
-          <label for="title-post" style="float: left;" id="title-label">Title:</label>
-          <input type="text" style="width: 100%;" id="title-post" name="title-post" required>
-          <br />
-          <label for="post-main" style="float: left;">Memo:</label>
-          <textarea name="post-main" id="post-main" rows="15" autocapitalize="true" required></textarea>
-          <br>
-          <button id="add-post-btn">Add</button>
+    <div id="user-info" style="display: none;" onclick="window.scrollTo(0,document.body.scrollHeight);">
+      <div id="container-nav" class="navicons">
+        <div id="namee">
+
         </div>
       </div>
     </div>
-    <div class="holder" id="main-memo"></div>
-    <div class="modal" id="modal-view">
-      <div class="modal-sandbox" id="modal-sandbox-view"></div>
-      <div class="modal-box">
-        <div class="modal-header">
-          <div class="close-modal" id="close-modal-view">&#10006;</div> 
-          <h1 id="view-title"></h1>
-          <h6 id="view-date"></h6>
-        </div>
-        <div class="modal-body">
-         <h3 id="view-article"></h3>
-        </div>
+    <i class="fa fa-home fa-3x navicons" style="float: left; color: blue;" aria-hidden="true"></i>
+    <i class="fas fa-plus-circle fa-3x navicons" style="color: blue;" id="add-post"></i>
+  </div>
+  <div class="modal" id="modal-name">
+    <div class="modal-sandbox" id="modal-sandbox"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="close-modal" id="close-modal">&#10006;</div>
+        <h1>Add a Memo</h1>
+      </div>
+      <div class="modal-body">
+        <label for="title-post" style="float: left;" id="title-label">Title:</label>
+        <input type="text" style="width: 100%;" id="title-post" name="title-post" required>
+        <br />
+        <label for="post-main" style="float: left;">Memo:</label>
+        <textarea name="post-main" id="post-main" rows="15" autocapitalize="true" required></textarea>
+        <br>
+        <button id="add-post-btn">Add</button>
       </div>
     </div>
-    <div class="solder" style="margin-top: 20px;"> 
-      <h1 id="username"></h1>
-      <button id="logout" onclick="logou()">Log Out</button>
+  </div>
+  <div class="container">
+    <div class="row" id="main-memo"></div>
+  </div>
+  \n
+  <div class="modal" id="modal-view">
+    <div class="modal-sandbox" id="modal-sandbox-view"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="close-modal" id="close-modal-view">&#10006;</div>
+        <h1 id="view-title"></h1>
+        <h6 id="view-date"></h6>
+      </div>
+      <div class="modal-body">
+        <div id="view-article" class="card-text"></div>
+      </div>
     </div>
-    
-    <script defer src="js/index.js"></script>
+  </div>
+  <div class="solder" style="margin-top: 20px;">
+    <h1 id="username"></h1>
+    <button id="logout" onclick="logou()">Log Out</button>
+  </div>
+
+  <script defer src="js/index.js"></script>
 </body>
+
 </html>

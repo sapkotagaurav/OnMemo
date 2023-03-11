@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Oswald&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Comfortaa|Oswald&display=swap');
 body * {
-    font-family: 'Comfortaa', cursive;
     align-items: center;
     justify-content: center;
     transition-duration: 1s;
+    white-space:pre-wrap;
 }
 
 body {
     text-align: center;
     align-items: center;
+
 }
 
 input,textarea {
@@ -66,7 +67,7 @@ img {
     border-radius: 10px;
 }
 
-#container {
+#container-nav {
     width: 50px;
     height: 50px;
     border-radius: 100px;
@@ -146,13 +147,11 @@ img {
   padding: 60px 40px;
 }
 
-/* Close Button */
 .close-modal {
   text-align: right;
   cursor: pointer;
 }
 
-/* Animation */
 @-webkit-keyframes modalbox {
   0% {
     top: -250px; 
@@ -208,4 +207,4 @@ img {
   border-radius: 10px;
   padding: 5px;
   height: 100px;
-}
+} 
