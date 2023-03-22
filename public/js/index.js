@@ -71,6 +71,7 @@ function eveokay() {
     document.getElementById("namee").innerHTML =
       user.displayName.charAt(0) + user.displayName.split(" ")[1].charAt(0);
   }
+  arrayy =[];
   firebase
     .database()
     .ref(`posts/${user.uid}`)
@@ -83,12 +84,11 @@ function eveokay() {
         };
         arrayy.unshift(valuetoPush);
       });
-main_memo.innerHTML =""
+      while(main_memo.firstChild) main_memo.removeChild(main_memo.firstChild);
       update_data(arrayy)
     });
 }
-function update_data(){
-    main_memo.innerHTML=""
+function update_data(arrayy){
     arrayy.forEach(function (element, index) {
         console.log(arrayy[index], index);
         var col = document.createElement("div");
@@ -144,8 +144,17 @@ function addpostdb() {
       .replaceAll(`"`, "&quot;")
       .replaceAll("\n", "<br>");
 
-    writeUserData(user.uid, title.value, p, Date.now());
     document.getElementById("modal-name").style.display = "none";
+    const p1 = new Promise((resolve,reject)=>{
+      resolve(document.getElementById('main-memo').innerHTML="")
+
+    })
+    p1.then(()=>{
+      console.log("Here");
+      writeUserData(user.uid, title.value, p, Date.now());
+
+    })
+
   }
 }
 

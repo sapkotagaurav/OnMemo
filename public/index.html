@@ -24,11 +24,17 @@
 </head>
 
 <body>
-  <div class="holder" id="nav">
-    <div id="verified" style="display: none;">
-      <h4 id="verified-txt"></h4>
-      <p>If Link has expired <a id="resend" href="javascript:void(0)">Resend Verification Link</a></p>
+  <nav class="navbar  navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="assets/profile.png" width=50 height=50 id="logo" alt="Logo">
+      
+    </a>  
+    <div>
+
+      <i class="fas fa-plus-circle fa-3x navicons" style="color: blue;" id="add-post"></i>Add post
+
     </div>
+
     <div id="user-info" style="display: none;" onclick="window.scrollTo(0,document.body.scrollHeight);">
       <div id="container-nav" class="navicons">
         <div id="namee">
@@ -36,8 +42,12 @@
         </div>
       </div>
     </div>
-    <i class="fa fa-home fa-3x navicons" style="float: left; color: blue;" aria-hidden="true"></i>
-    <i class="fas fa-plus-circle fa-3x navicons" style="color: blue;" id="add-post"></i>
+
+  </nav>
+    <div id="verified" style="display: none;">
+      <h4 id="verified-txt"></h4>
+      <p>If Link has expired <a id="resend" href="javascript:void(0)">Resend Verification Link</a></p>
+    
   </div>
   <div class="modal" id="modal-name">
     <div class="modal-sandbox" id="modal-sandbox"></div>
@@ -60,7 +70,7 @@
   <div class="container">
     <div class="row" id="main-memo"></div>
   </div>
-  \n
+  
   <div class="modal" id="modal-view">
     <div class="modal-sandbox" id="modal-sandbox-view"></div>
     <div class="modal-box">
